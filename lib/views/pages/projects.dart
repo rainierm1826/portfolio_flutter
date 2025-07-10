@@ -21,50 +21,52 @@ class Projects extends StatelessWidget {
           ),
           const SizedBox(height: 24),
           ...projects.map((project) {
-            return Card(
-              margin: const EdgeInsets.symmetric(vertical: 12),
-              elevation: 4,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Image.asset(
-                    project['image'],
-                    width: double.infinity,
-                    height: 300,
-                    fit: BoxFit.cover,
-                  ),
+            return Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Card(
+                margin: const EdgeInsets.symmetric(vertical: 12),
+                elevation: 4,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Image.asset(
+                      project['image'],
+                      width: double.infinity,
+                      fit: BoxFit.fill,
+                    ),
 
-                  Padding(
-                    padding: const EdgeInsets.all(16),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Center(
-                          child: Text(
-                            textAlign: TextAlign.center,
-                            project['name'],
-                            style: const TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold,
-                              fontFamily: "Rowdies",
+                    Padding(
+                      padding: const EdgeInsets.all(16),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Center(
+                            child: Text(
+                              textAlign: TextAlign.center,
+                              project['name'],
+                              style: const TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                                fontFamily: "Rowdies",
+                              ),
                             ),
                           ),
-                        ),
-                        const SizedBox(height: 8),
-                        Center(
-                          child: Text(
-                            textAlign: TextAlign.center,
-                            project['description'],
-                            style: const TextStyle(fontSize: 14),
+                          const SizedBox(height: 8),
+                          Center(
+                            child: Text(
+                              textAlign: TextAlign.center,
+                              project['description'],
+                              style: const TextStyle(fontSize: 14),
+                            ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             );
-          }).toList(),
+          }),
         ],
       ),
     );
