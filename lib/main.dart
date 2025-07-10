@@ -3,11 +3,11 @@ import 'package:flutter_portfolio/views/data/constants.dart';
 import 'package:flutter_portfolio/views/pages/welcome.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const AboutMe_Marasigan());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class AboutMe_Marasigan extends StatelessWidget {
+  const AboutMe_Marasigan({super.key});
 
   @override
   Widget build(BuildContext context) {
