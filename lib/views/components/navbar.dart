@@ -22,6 +22,10 @@ class _NavbarState extends State<Navbar> {
               icon: Icon(FontAwesomeIcons.code),
               label: "Skills",
             ),
+            NavigationDestination(
+              icon: Icon(FontAwesomeIcons.envelope),
+              label: "Contact",
+            ),
           ],
           selectedIndex: pageNumber,
           onDestinationSelected: (int currentPage) {

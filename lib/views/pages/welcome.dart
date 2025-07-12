@@ -15,7 +15,8 @@ class Welcome extends StatelessWidget {
               Image.asset('assets/images/welcome.png'),
               SizedBox(height: 20.0),
               FilledButton(
-                onPressed: () {
+                onPressed: () {},
+                onLongPress: () {
                   Navigator.pushReplacement(
                     context,
                     MaterialPageRoute(builder: (context) => Layout()),
