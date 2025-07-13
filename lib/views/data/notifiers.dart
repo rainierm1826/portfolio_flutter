@@ -8,4 +8,9 @@ class PageNotifier {
   }
 }
 
+class ThemeNotifier {
+  ValueNotifier<bool> theme = ValueNotifier<bool>(false);
+}
+
+final themeNotifier = ThemeNotifier();
 final pageNotfier = PageNotifier();

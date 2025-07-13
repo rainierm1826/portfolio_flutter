@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_portfolio/views/components/logo.dart';
+import 'package:flutter_portfolio/views/components/theme_button.dart';
 import 'package:flutter_portfolio/views/pages/welcome.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class Appbar extends StatelessWidget implements PreferredSizeWidget {
   const Appbar({super.key});
@@ -20,11 +20,15 @@ class Appbar extends StatelessWidget implements PreferredSizeWidget {
           );
         },
       ),
-      title: Logo(),
+      title: Logo(title: "RAINIER",),
       actions: [
-        IconButton(onPressed: () => {}, icon: Icon(FontAwesomeIcons.github)),
-        IconButton(onPressed: () => {}, icon: Icon(FontAwesomeIcons.facebook)),
-        IconButton(onPressed: () => {}, icon: Icon(FontAwesomeIcons.linkedin)),
+        IconButton(
+          onPressed: () {
+            Navigator.pushNamed(context, "/pokemon");
+          },
+          icon: Icon(Icons.blur_circular_outlined),
+        ),
+        ThemeButton(),
       ],
     );
   }

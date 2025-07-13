@@ -21,11 +21,11 @@ class Projects extends StatelessWidget {
           ),
           const SizedBox(height: 24),
           ...projects.map((project) {
-            return Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Card(
-                margin: const EdgeInsets.symmetric(vertical: 12),
-                elevation: 4,
+            return Card(
+              margin: const EdgeInsets.symmetric(vertical: 12),
+              elevation: 4,
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
