@@ -9,7 +9,7 @@ class PageNotifier {
 }
 
 class ThemeNotifier {
-  ValueNotifier<bool> theme = ValueNotifier<bool>(false);
+  ValueNotifier<bool> theme = ValueNotifier<bool>(true);
 }
 
 final themeNotifier = ThemeNotifier();
